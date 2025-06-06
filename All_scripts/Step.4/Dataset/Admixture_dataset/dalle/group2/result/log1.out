@@ -1,0 +1,46 @@
+****                   ADMIXTURE Version 1.3.0                  ****
+****                    Copyright 2008-2015                     ****
+****           David Alexander, Suyash Shringarpure,            ****
+****                John  Novembre, Ken Lange                   ****
+****                                                            ****
+****                 Please cite our paper!                     ****
+****   Information at www.genetics.ucla.edu/software/admixture  ****
+
+Cross-validation will be performed.  Folds=5.
+Random seed: 1749206088
+Point estimation method: Block relaxation algorithm
+Convergence acceleration algorithm: QuasiNewton, 3 secant conditions
+Point estimation will terminate at 10 iterations
+Estimation of standard errors disabled; will compute point estimates only.
+Size of G: 18x218
+Performing five EM steps to prime main algorithm
+1 (EM) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 2527.8
+2 (EM) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+3 (EM) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+4 (EM) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+5 (EM) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+Initial loglikelihood: -3913.19
+Starting main algorithm
+1 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+2 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+PROBLEM INVERTING MATRIX!
+3 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+PROBLEM INVERTING MATRIX!
+4 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+PROBLEM INVERTING MATRIX!
+5 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+PROBLEM INVERTING MATRIX!
+6 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+PROBLEM INVERTING MATRIX!
+7 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+PROBLEM INVERTING MATRIX!
+8 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+PROBLEM INVERTING MATRIX!
+9 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+PROBLEM INVERTING MATRIX!
+10 (QN/Block) 	Elapsed: 0	Loglikelihood: -3913.19	(delta): 0
+Summary: 
+Converged in 10 iterations (0.004 sec)
+Loglikelihood: -3913.189235
+CV error (K=1): 1.49680
+Writing output files.

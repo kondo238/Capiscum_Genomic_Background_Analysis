@@ -1,0 +1,42 @@
+****                   ADMIXTURE Version 1.3.0                  ****
+****                    Copyright 2008-2015                     ****
+****           David Alexander, Suyash Shringarpure,            ****
+****                John  Novembre, Ken Lange                   ****
+****                                                            ****
+****                 Please cite our paper!                     ****
+****   Information at www.genetics.ucla.edu/software/admixture  ****
+
+Cross-validation will be performed.  Folds=5.
+Random seed: 1749206088
+Point estimation method: Block relaxation algorithm
+Convergence acceleration algorithm: QuasiNewton, 3 secant conditions
+Point estimation will terminate at 10 iterations
+Estimation of standard errors disabled; will compute point estimates only.
+Size of G: 18x1071
+Performing five EM steps to prime main algorithm
+1 (EM) 	Elapsed: 0	Loglikelihood: -17997.7	(delta): 11320.4
+2 (EM) 	Elapsed: 0	Loglikelihood: -15727.8	(delta): 2269.88
+3 (EM) 	Elapsed: 0	Loglikelihood: -12581.1	(delta): 3146.76
+4 (EM) 	Elapsed: 0	Loglikelihood: -9566.92	(delta): 3014.14
+5 (EM) 	Elapsed: 0	Loglikelihood: -7533.08	(delta): 2033.84
+Initial loglikelihood: -7533.08
+Starting main algorithm
+1 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -6565.06	(delta): 968.022
+2 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -6231.61	(delta): 333.44
+3 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -5958.38	(delta): 273.238
+4 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -5876.98	(delta): 81.3991
+5 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -5865.5	(delta): 11.4826
+6 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -5863.52	(delta): 1.97863
+7 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -5863.52	(delta): 0.00057825
+8 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -5863.52	(delta): 0
+9 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -5863.52	(delta): 0
+10 (QN/Block) 	Elapsed: 0.002	Loglikelihood: -5863.52	(delta): 0
+Summary: 
+Converged in 10 iterations (0.027 sec)
+Loglikelihood: -5863.516308
+Fst divergences between estimated populations: 
+	Pop0	
+Pop0	
+Pop1	0.779	
+CV error (K=2): 0.89795
+Writing output files.
