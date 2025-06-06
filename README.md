@@ -1,3 +1,3 @@
 # Capiscum_Genomic_Background_Analysis
 
-# Step1
+# Step.1: Stacks analysis
