@@ -1,0 +1,148 @@
+PLINK v1.90b4 64-bit (20 Mar 2017)
+Options in effect:
+  --file dataset
+  --make-bed
+  --out dataset
+
+Hostname: a001
+Working directory: /home/kondopep08/admixture_analysis/Admixture_dataset/frutescens_test/group2
+Start time: Fri Jun  6 19:34:45 2025
+
+Random number seed: 1749206085
+1547683 MB RAM detected; reserving 773841 MB for main workspace.
+Scanning .ped file...
+Possibly irregular .ped line.  Restarting scan, assuming multichar alleles.
+.ped scan complete (for binary autoconversion).
+Warning: Variant 1 triallelic; setting rarest alleles missing.
+Warning: Variant 2 triallelic; setting rarest alleles missing.
+Warning: Variant 3 triallelic; setting rarest alleles missing.
+Warning: Variant 4 triallelic; setting rarest alleles missing.
+Warning: Variant 5 triallelic; setting rarest alleles missing.
+Warning: Variant 6 triallelic; setting rarest alleles missing.
+Warning: Variant 7 triallelic; setting rarest alleles missing.
+Warning: Variant 8 triallelic; setting rarest alleles missing.
+Warning: Variant 9 triallelic; setting rarest alleles missing.
+Warning: Variant 10 triallelic; setting rarest alleles missing.
+Warning: Variant 11 triallelic; setting rarest alleles missing.
+Warning: Variant 12 triallelic; setting rarest alleles missing.
+Warning: Variant 13 triallelic; setting rarest alleles missing.
+Warning: Variant 14 triallelic; setting rarest alleles missing.
+Warning: Variant 15 triallelic; setting rarest alleles missing.
+Warning: Variant 16 triallelic; setting rarest alleles missing.
+Warning: Variant 17 triallelic; setting rarest alleles missing.
+Warning: Variant 18 triallelic; setting rarest alleles missing.
+Warning: Variant 19 triallelic; setting rarest alleles missing.
+Warning: Variant 20 triallelic; setting rarest alleles missing.
+Warning: Variant 21 triallelic; setting rarest alleles missing.
+Warning: Variant 22 triallelic; setting rarest alleles missing.
+Warning: Variant 23 triallelic; setting rarest alleles missing.
+Warning: Variant 24 triallelic; setting rarest alleles missing.
+Warning: Variant 25 triallelic; setting rarest alleles missing.
+Warning: Variant 26 triallelic; setting rarest alleles missing.
+Warning: Variant 27 triallelic; setting rarest alleles missing.
+Warning: Variant 28 triallelic; setting rarest alleles missing.
+Warning: Variant 29 triallelic; setting rarest alleles missing.
+Warning: Variant 30 triallelic; setting rarest alleles missing.
+Warning: Variant 31 triallelic; setting rarest alleles missing.
+Warning: Variant 32 triallelic; setting rarest alleles missing.
+Warning: Variant 33 triallelic; setting rarest alleles missing.
+Warning: Variant 34 triallelic; setting rarest alleles missing.
+Warning: Variant 35 triallelic; setting rarest alleles missing.
+Warning: Variant 36 triallelic; setting rarest alleles missing.
+Warning: Variant 37 triallelic; setting rarest alleles missing.
+Warning: Variant 38 triallelic; setting rarest alleles missing.
+Warning: Variant 39 triallelic; setting rarest alleles missing.
+Warning: Variant 40 triallelic; setting rarest alleles missing.
+Warning: Variant 41 triallelic; setting rarest alleles missing.
+Warning: Variant 42 triallelic; setting rarest alleles missing.
+Warning: Variant 43 triallelic; setting rarest alleles missing.
+Warning: Variant 44 triallelic; setting rarest alleles missing.
+Warning: Variant 45 triallelic; setting rarest alleles missing.
+Warning: Variant 46 triallelic; setting rarest alleles missing.
+Warning: Variant 47 triallelic; setting rarest alleles missing.
+Warning: Variant 48 triallelic; setting rarest alleles missing.
+Warning: Variant 49 triallelic; setting rarest alleles missing.
+Warning: Variant 50 triallelic; setting rarest alleles missing.
+Warning: Variant 51 triallelic; setting rarest alleles missing.
+Warning: Variant 52 triallelic; setting rarest alleles missing.
+Warning: Variant 53 triallelic; setting rarest alleles missing.
+Warning: Variant 54 triallelic; setting rarest alleles missing.
+Warning: Variant 55 triallelic; setting rarest alleles missing.
+Warning: Variant 56 triallelic; setting rarest alleles missing.
+Warning: Variant 57 triallelic; setting rarest alleles missing.
+Warning: Variant 58 triallelic; setting rarest alleles missing.
+Warning: Variant 59 triallelic; setting rarest alleles missing.
+Warning: Variant 60 triallelic; setting rarest alleles missing.
+Warning: Variant 61 triallelic; setting rarest alleles missing.
+Warning: Variant 62 triallelic; setting rarest alleles missing.
+Warning: Variant 63 triallelic; setting rarest alleles missing.
+Warning: Variant 64 triallelic; setting rarest alleles missing.
+Warning: Variant 65 triallelic; setting rarest alleles missing.
+Warning: Variant 66 triallelic; setting rarest alleles missing.
+Warning: Variant 67 triallelic; setting rarest alleles missing.
+Warning: Variant 68 triallelic; setting rarest alleles missing.
+Warning: Variant 69 triallelic; setting rarest alleles missing.
+Warning: Variant 70 triallelic; setting rarest alleles missing.
+Warning: Variant 71 triallelic; setting rarest alleles missing.
+Warning: Variant 72 triallelic; setting rarest alleles missing.
+Warning: Variant 73 triallelic; setting rarest alleles missing.
+Warning: Variant 74 triallelic; setting rarest alleles missing.
+Warning: Variant 75 triallelic; setting rarest alleles missing.
+Warning: Variant 76 triallelic; setting rarest alleles missing.
+Warning: Variant 77 triallelic; setting rarest alleles missing.
+Warning: Variant 78 triallelic; setting rarest alleles missing.
+Warning: Variant 79 triallelic; setting rarest alleles missing.
+Warning: Variant 80 triallelic; setting rarest alleles missing.
+Warning: Variant 81 triallelic; setting rarest alleles missing.
+Warning: Variant 82 triallelic; setting rarest alleles missing.
+Warning: Variant 83 triallelic; setting rarest alleles missing.
+Warning: Variant 84 triallelic; setting rarest alleles missing.
+Warning: Variant 85 triallelic; setting rarest alleles missing.
+Warning: Variant 86 triallelic; setting rarest alleles missing.
+Warning: Variant 87 triallelic; setting rarest alleles missing.
+Warning: Variant 88 triallelic; setting rarest alleles missing.
+Warning: Variant 89 triallelic; setting rarest alleles missing.
+Warning: Variant 90 triallelic; setting rarest alleles missing.
+Warning: Variant 91 triallelic; setting rarest alleles missing.
+Warning: Variant 92 triallelic; setting rarest alleles missing.
+Warning: Variant 93 triallelic; setting rarest alleles missing.
+Warning: Variant 94 triallelic; setting rarest alleles missing.
+Warning: Variant 95 triallelic; setting rarest alleles missing.
+Warning: Variant 96 triallelic; setting rarest alleles missing.
+Warning: Variant 97 triallelic; setting rarest alleles missing.
+Warning: Variant 98 triallelic; setting rarest alleles missing.
+Warning: Variant 99 triallelic; setting rarest alleles missing.
+Warning: Variant 100 triallelic; setting rarest alleles missing.
+Warning: Variant 101 triallelic; setting rarest alleles missing.
+Warning: Variant 102 triallelic; setting rarest alleles missing.
+Warning: Variant 103 triallelic; setting rarest alleles missing.
+Warning: Variant 104 triallelic; setting rarest alleles missing.
+Warning: Variant 105 triallelic; setting rarest alleles missing.
+Warning: Variant 106 triallelic; setting rarest alleles missing.
+Warning: Variant 107 triallelic; setting rarest alleles missing.
+Warning: Variant 108 triallelic; setting rarest alleles missing.
+Warning: Variant 109 triallelic; setting rarest alleles missing.
+Warning: Variant 110 triallelic; setting rarest alleles missing.
+Warning: Variant 111 triallelic; setting rarest alleles missing.
+Warning: Variant 112 triallelic; setting rarest alleles missing.
+Warning: Variant 113 triallelic; setting rarest alleles missing.
+Warning: Variant 114 triallelic; setting rarest alleles missing.
+Warning: Variant 115 triallelic; setting rarest alleles missing.
+Warning: Variant 116 triallelic; setting rarest alleles missing.
+Warning: Variant 117 triallelic; setting rarest alleles missing.
+Warning: Variant 118 triallelic; setting rarest alleles missing.
+Performing single-pass .bed write (118 variants, 18 people).
+--file: dataset-temporary.bed + dataset-temporary.bim + dataset-temporary.fam
+written.
+118 variants loaded from .bim file.
+18 people (0 males, 0 females, 18 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dataset.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 18 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.84275.
+118 variants and 18 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dataset.bed + dataset.bim + dataset.fam ... done.
+
+End time: Fri Jun  6 19:34:45 2025
