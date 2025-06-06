@@ -1,6 +1,13 @@
+################################################NOTE####################################################################################################################################################
+#This is an R script to perform "1st Step: stacks existence-based catalog characterization for unknown Capsicum sample", and prepare the genotype data for "2nd Step:stacks-sequence based catalog characterization"
+#!!!!!Important!!!!!! Before this analysis, please unzip the catalog dataset file "populations.haplotypes.tsv.zip" in the Dataset directory (./Dataset)
+#######################################################################################################################################################################################################
+
 #Necessary_packages
 library(progress)
-library(stringr)
+library(string)
+
+#Set_working_directory
 setwd(getwd())
 unlink("./Output", recursive = TRUE)
 dir.create("./Output")
@@ -461,4 +468,3 @@ rm(unknown_samples, reference_spesies, g)
 
 write.csv(Derivation_df, "./Output/Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv", row.names = F)
 write.csv(Admix_catalog_counts, "./Output/The_number_of_catalogs_used_for_admixture_analysis.csv", row.names = F)
-
