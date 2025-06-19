@@ -5,9 +5,7 @@
 
 #Necessary_packages
 library(progress)
-library(string)
-
-#Set_working_directory
+library(stringr)
 setwd(getwd())
 unlink("./Output", recursive = TRUE)
 dir.create("./Output")
@@ -82,12 +80,6 @@ for(i in 1:length(reference_spesies)){ #Put_Presence(stacks >= 1)_and_Absence(st
 }
 rownames(reference_array) <- reference_array$RAD_catalog
 rm(i)
-
-#Prepare_data_frame_to_save_Number_of_catalogs_used_for_Admixture_analysis(This is for Step2.catalog_sequence-based_characterization)
-Admix_catalog_counts <- as.data.frame(matrix(NA,
-                                             ncol = 3,
-                                             nrow = 0))
-colnames(Admix_catalog_counts) <- c("UnknownSamples", "Group", "CatalogCounts")
 
 ####################Step1.catalog_existance-based_characterization#################################
 #Calculation_of_the_commonality_of_present_stacks_between_unknown_samples_and_Capsicm_species_with_preparing_genotype_data_for_futher_Admixture_analysis_for_multiple_species-shared_catalogs
@@ -241,6 +233,8 @@ ThreeSpeciesBased <- cbind(UnknownSamples=rep(unknown_samples[g],8), Characteriz
 Derivation_df <- rbind(Derivation_df, ThreeSpeciesBased)
 rm(ThreeSpeciesBased, df)
 
+write.csv(Derivation_df, "./Output/Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv", row.names = F)
+
 ############Preparation_for_genotype_dataset_for_Step2.catalog_sequence-based_characterization############
 #Define_catalog_group(group1:C.annuum&C.chinense-common_catalog, group2:C.annuum&C.frutescens-common_catalog,group3:C.chinense&C.frutescens-common_catalog, group4:Three_species-common_catalog,)
 Catalog_group_info <- data.frame(Group=c("group1", "group2", "group3", "group4"),
@@ -357,10 +351,8 @@ geno <- geno[,validRAD_catalog]
 rm(c_df, validRAD_catalog, Needed_reads)
 
 if(ncol(geno) < 5){ #If_the_extracted_catalogs_were_less_than_five, the further_analysis_were_given_up
-  #The_number_of_extracted_catalogs_for_each_group_was_saved_in_Admix_catalog_counts
-  a <- data.frame(UnknownSamples=unknown_samples[g], Group=Catalog_group_info[h,1], CatalogCounts=ncol(geno))
-  Admix_catalog_counts <- rbind(Admix_catalog_counts, a)
-  rm(geno, s_mt, marker, a)
+  
+  rm(geno, s_mt, marker)
 
   }else{ #If_the_extracted_catalogs_were_less_more_than_five, the further_filtering_was_performed
 
@@ -387,11 +379,10 @@ geno <- geno[,which(allele_no == 2)] #genotypes possessing two kinds of alleles 
 rm(i, a, allele_no)  
 
 if(ncol(geno) < 5){  #If_the_extracted_catalogs_were_less_than_five, the further_analysis_were_given_up
-  #The_number_of_extracted_catalogs_for_each_group_was_saved_in_Admix_catalog_counts
-  a <- data.frame(UnknownSamples=unknown_samples[g], Group=Catalog_group_info[h,1], CatalogCounts=ncol(geno))
-  Admix_catalog_counts <- rbind(Admix_catalog_counts, a)
-  rm(geno, s_mt, marker, a)
-}else{ #If_the_extracted_catalogs_were_less_more_than_five, the further_filtering_was_performed
+  
+  rm(geno, s_mt, marker)
+
+  }else{ #If_the_extracted_catalogs_were_less_more_than_five, the further_filtering_was_performed
 
 
 #3rd_filtering_for_catalogs_where_missing_genotype_ratio_exceeds_more_than_30%_among_all_samples
@@ -451,11 +442,8 @@ write.table(map, file=paste("./Output",
                             sep = ""),
             sep="\t",col.names=F,row.names=F,quote=F)
 
-#The_number_of_extracted_catalogs_for_each_group_was_saved_in_Admix_catalog_counts
-a <- data.frame(UnknownSamples=unknown_samples[g], Group=Catalog_group_info[h,1], CatalogCounts=ncol(geno))
-Admix_catalog_counts <- rbind(Admix_catalog_counts, a)
+rm(geno, geno2, map, s_mt, marker)
 
-rm(geno, geno2, map, s_mt, marker, a)
 }
 }
 }
@@ -465,6 +453,3 @@ rm(h, df, di, Catalog_group_info, merged_array, test_array)
 }
 
 rm(unknown_samples, reference_spesies, g)
-
-write.csv(Derivation_df, "./Output/Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv", row.names = F)
-write.csv(Admix_catalog_counts, "./Output/The_number_of_catalogs_used_for_admixture_analysis.csv", row.names = F)
