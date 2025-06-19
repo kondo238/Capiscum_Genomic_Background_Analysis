@@ -3,14 +3,13 @@
 #The dataset for ancestral population-belonging proportion was prepared by copying and pasting the directory 'Admixture_dataset' (after admixture analysis: see Step 2) to the Dataset directory (./Dataset)
 #Finally, the barplot exhibiting population-belonging proportion will be obtained in the output directory (./Output), which will automatically be created.
 ################################################################################################################################################################################################
+
 # Necessary libraries in this analysis
 library(ggplot2)
 library(tidyverse)
 
-#Setting working directory
-setwd(getwd())
-
 ####################################Directory_Setting_&_loading_data_necessary_for_whole_process############################################
+setwd(getwd()) #Setting working directory
 unlink("./Output", recursive = TRUE) #If there is old output directory, it will be removed
 dir.create("./Output") #Create_directory_to_save_output_data
 
@@ -30,7 +29,7 @@ Catalog_group_info <- data.frame(Group=c("group1", "group2", "group3", "group4")
 order_and_color_for_figration <- as.data.frame(read.csv("./Dataset/Group_order.csv"))
 
 
-#################################Loading_each_Admixture_analysis_data_and_Drawing_Figure############################################
+#################################Loading_each_Admixture_analysis_data_and_Drawing_Figure###########################
 ###Loop_for_each_unknown_samples
 for(g in 1:length(unknown_samples)){
 ###Preapre_outpute_directory_for_each_unknown_samples
@@ -154,18 +153,9 @@ df <- df5 #The_finale_adjusted_dataframe
 
 rm(df2, df3, df4, df5, Related_sampleID, a, i, j, k, l, n, x, vec, no)
 ###Draw_barplot_exhibiting_ancestral_population-deriving_proportion_using_ggplot
-#Define_color_based_on_the_dataset("order_and_color_for_figuration")
-color <- order_and_color_for_figration[order_and_color_for_figration$UnknownSamples == unknown_samples[g] &
-                                         order_and_color_for_figration$CataloGroup == Catalog_group_info[h,1],c(7,8)]
-colnames(color) <- c("2", "1")
-fill_colors <- setNames(as.character(color[1, ]), colnames(color))
-df$K <- factor(df$K, levels = colnames(color))
-
-
 ###Draw_figure_without_sample_name_and_save
-x <- ggplot(df, aes(x = Accession, y = Value)) +
-  geom_bar(stat="identity", aes(fill=K), width = 1.0, colour = "black", size = 0.5) +
-  scale_fill_manual(values = fill_colors) +
+x <- ggplot(df, aes(x = Accession, y = Value, fill=K)) +
+  geom_bar(stat="identity", width = 1.0, colour = "black", size = 0.5) +
   theme(axis.ticks = element_blank(),  
         axis.text = element_blank(),
         axis.title = element_blank(),
@@ -308,24 +298,17 @@ write.csv(df, paste("./Output/",
     
     rm(df2, df3, df4, df5, Related_sampleID, a, i, j, k, l, n, x, vec, no)
     ###Draw_barplot_exhibiting_ancestral_population-deriving_proportion_using_ggplot
-    #Define_color_based_on_the_dataset("order_and_color_for_figuration")
-    color <- order_and_color_for_figration[order_and_color_for_figration$UnknownSamples == unknown_samples[g] &
-                                             order_and_color_for_figration$CataloGroup == Catalog_group_info[h,1],c(7,8,9)]
-    colnames(color) <- c("3", "2", "1")
-    fill_colors <- setNames(as.character(color[1, ]), colnames(color))
-    df$K <- factor(df$K, levels = colnames(color))
     
     ###Draw_figure_without_sample_name_and_save
-    x <- ggplot(df, aes(x = Accession, y = Value)) +
-      geom_bar(stat="identity", aes(fill=K), width = 1.0, colour = "black", size = 0.5) +
-      scale_fill_manual(values = fill_colors) +
+    x <- ggplot(df, aes(x = Accession, y = Value, fill = K)) +
+      geom_bar(stat="identity", width = 1.0, colour = "black", size = 0.5) +
       theme(axis.ticks = element_blank(),  
             axis.text = element_blank(),
             axis.title = element_blank(),
             axis.line = element_blank(),
             legend.position = "none")
-    rm(fill_colors, color)
-    #Note:Position_of_each_barplot_from_left_side_is_consistent_with_sample_name_in_the_data_frame("df")
+
+        #Note:Position_of_each_barplot_from_left_side_is_consistent_with_sample_name_in_the_data_frame("df")
 
     ggsave(file = paste("./Output/",
                            unknown_samples[g],
