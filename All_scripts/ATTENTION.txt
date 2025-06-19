@@ -1,0 +1,5 @@
+!!!!!!!ATTENTION!!!!!
+・This directory contents scripts for only genomic background analysis, and doesn't contain other scripts for RAD-seq data filtering, and genomic positional analysis for mappable stacks at Dalle-Khursani possessing catalogs.
+・The scripts uploaded in this directory have been organized for clarity for public release, and therefore differ from the more complex scripts originally used to generate the dataset published in this repository. However, the analysis itself is exactly the same, and this does not affect the reproducibility of the results.
+・This repository never publish RAD-seq raw data for each sample and readers can't run the script for the job until stacks analysis in "Step.1" directory .
+・Wheras all readers can the scripts for the analysis after stacks nalysis (scripts in 'Step.2', 'Step.3', 'Step.4' directory can be run), and all datasets were prepared for each directory.
