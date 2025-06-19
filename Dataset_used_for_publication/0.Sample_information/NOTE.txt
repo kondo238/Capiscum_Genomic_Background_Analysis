@@ -1,2 +1,4 @@
 #NOTE
+This directory includes one file below.
 
+1. Sample_information.csv: Sample lists of the present plant materials, which are necessary for running Genomic Background Analysis.
