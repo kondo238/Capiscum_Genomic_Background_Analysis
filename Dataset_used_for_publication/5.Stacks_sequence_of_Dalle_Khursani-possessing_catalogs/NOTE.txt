@@ -1,1 +1,11 @@
+This directory includes the five files below.
 
+1. C.annuum-derived_stacks.fa.zip: Sequence data (.fa) of stacks at C.annuum-derived catalogs.
+
+2. C.chinense-derived_stacks.fa.zip: Sequence data (.fa) of stacks at C.chinense-derived catalogs.
+
+3. C.annuum_and_C.chinense-derived_stacks.fa.zip: Sequence data (.fa) of stacks at C.annuum & C.chinense-derived catalogs.
+
+4. C.annuum_and_C.chinense-derived_stacks.fa.zip: Sequence data (.fa) of stacks at the other catalogs.
+
+5. Genomic_positions_of_mappable_stacks.csv.zip: Genomic position data for mappable stacks in Dalle Khursani-possessing catalogs to C. annuum ('Takanotsume', Shirasawa et al. 2023) and C. chinense genome (Zhang et al. 2025), respectively.
