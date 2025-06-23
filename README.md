@@ -28,10 +28,8 @@ For runnning this job, the population.txt is nessesary including sample ID and p
 
 The summarized script was shown below: 
 
-'''
-
-'''
-
+#!/bin/bash
+echo "Hello from Bash!"
 
 
 
