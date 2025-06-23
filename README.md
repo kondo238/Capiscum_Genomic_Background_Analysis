@@ -58,9 +58,10 @@ In the Step.3, admixture analysis was performed in more than two species-common 
 
 Script and input directory was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
 
-**Input directoy** **:** directory containing all input data for admixture analysis:
 
-This directory firsty contai four directories for unknown samples as below,
+**Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2/Admixture_dataset):
+
+This directory first contains four directories for unknown samples as below,
 
 **annuum_test**: positive control six samples of *C.annuum*
 
