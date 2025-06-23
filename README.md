@@ -18,15 +18,23 @@
 # Step.1: Stacks analysis
 In the Step.1, stack analysis was performed with the shell command **'denoveo_map.pl' in stacks (v2.61)**.
 
+This pipeline includes five jobs (‘1.ustacks’, ‘2.cstacks’, ‘3.sstacks’, ‘4.gstacks’, and ‘5.population’) as below.
+
+**1.ustacks** **:** construct short contigs called ‘stacks’ by de novo assembly from filtered reads (.fastq) of all samples and defined loci called ‘catalogs’ 
+
+**2.cstacks** **:** develop catalog list
+
+**3.sstacks** **:** explore the stacks that matched each catalog
+
+**4.gstacks** **:** merge similar stacks and detect SNPs among all samples
+
+**5.population** **:** generated the output file **'(populations.haplotypes.tsv)'** called **catalog_dataset** in the present study.　Then, the representative stacks tag (sequence) file 'catalog.tags.tsv' was also obtained, which were used for positional analysis of stacks in Dalle Khursani.
+
 Script and 'population.txt' were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.1
 
-This analysis generates **stacks by *de novo* assembly from RAD-seq reads (.fastq)** of all samples in the present study.
+For running this job, the population.txt is necessary, including sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
 
-Then, **catalog_dataset ('populations.haplotypes.tsv')** will be obtained, containing SNP genotype for all catalog (loci) and all samples.
-
-For runnning this job, the population.txt is nessesary including sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
-
-The summarized script was shown below: 
+The summarized script is shown below: 
 ```
 denovo_map.pl -M 5 -T 16 \
               -o ${Output_directory} \
@@ -35,8 +43,6 @@ denovo_map.pl -M 5 -T 16 \
               --paired -X "ustacks:-M 5 -m 3 --force-diff-len" \
               -X "cstacks:-n 0" \
               -X "populations:--write-random-snp -r 0.16 -p 1 --vcf --plink --max-obs-het 1.0 --fasta-loci --fasta-samples --fasta-samples-raw"
-
-#End
 ```
 
 
