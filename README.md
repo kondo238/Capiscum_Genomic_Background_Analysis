@@ -8,7 +8,7 @@
 
 ***NOTE*** **:** This repository was prepared to share the dataset and scripts related to the publication of the above manuscript. 
 
-***This repository includes two main directories***
+This repository includes two main directories
 
 **・All_scripts** **:** This directory contains scripts (shell, R) related to genetic background analysis of Dalle Khursani and positive control accessions of C. annuum-complex. The summarized explanation of this analysis (Step.1 ~ Step.2) is described below.
 
@@ -18,9 +18,9 @@
 # Step.1
 **!!!Attention!!!** **:** This repository doesn't contain fastq data, so it's impossible to run this job for readers.
 
-In the Step.1, stack analysis was performed with the shell command **'denoveo_map.pl' in stacks (v2.61)**.
+・In the Step.1, stack analysis was performed with the shell command **'denoveo_map.pl' in stacks (v2.61)**.
 
-This pipeline includes five jobs (‘1.ustacks’, ‘2.cstacks’, ‘3.sstacks’, ‘4.gstacks’, and ‘5.population’) as below.
+・This pipeline includes five jobs (‘1.ustacks’, ‘2.cstacks’, ‘3.sstacks’, ‘4.gstacks’, and ‘5.population’) as below.
 
 **1.ustacks** **:** construct short contigs called ‘stacks’ by de novo assembly from filtered reads (.fastq) of all samples and defined loci called ‘catalogs’ 
 
@@ -32,11 +32,11 @@ This pipeline includes five jobs (‘1.ustacks’, ‘2.cstacks’, ‘3.sstacks
 
 **5.population** **:** generated the output file **'(populations.haplotypes.tsv)'** called **catalog_dataset** in the present study.　Then, the representative stacks tag (sequence) file 'catalog.tags.tsv' was also obtained, which were used for positional analysis of stacks in Dalle Khursani.
 
-Script and 'population.txt' were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.1
+・Script and 'population.txt' were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.1
 
-**population.txt** **:** list for sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
+**・population.txt** **:** list for sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
 
-The summarized script is shown below: 
+・The summarized script is shown below: 
 ```
 denovo_map.pl -M 5 -T 16 \
               -o ${Output_directory} \
@@ -62,11 +62,11 @@ This script includes two tasks as below.
 # Step.3
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
 
-In the Step.3, admixture analysis was performed in more than two species-common catalogs using shell command **'admixture' in admixture (v1.3.0)**.
-#
-Script and input directory was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
-#
-**Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2/Admixture_dataset):
+・In the Step.3, admixture analysis was performed in more than two species-common catalogs using shell command **'admixture' in admixture (v1.3.0)**.
+
+・Script and input directory was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
+
+**・Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2/Admixture_dataset):
 
 This directory first contains four directories for unknown samples as below,
 
@@ -89,16 +89,16 @@ In each above directory, four directories were prepared for catalog group as bel
 **group4**: for Three-species-common catalogs 
 
 In each above directory, two input data ('dataset.ped' and 'dataset.map') were prepared.
-#
-This script includes two tasks as below.
+
+・This script includes two tasks as below.
 
 **1. Create bed file** **:** Create bed format file (dataset.bed) from input data (dataset.ped and dataset.map), which were all necessary for admixture analysis.
 
 **2. Admixture analysis** **:** Perform admixture analysis in each catalog dataset.
-#
-For running this job, please copy and paste the input directory (Admixture_dataset) in your working directory
-#
-The summarized script is shown below: 
+
+・For running this job, please copy and paste the input directory (Admixture_dataset) in your working directory
+
+・The summarized script is shown below: 
 ```
 ##Path_for_working_directory
 WD=/.../admixture_analysis
