@@ -65,29 +65,29 @@ This script includes two tasks as below.
 ・In the Step.3, admixture analysis was performed in more than two species-common catalogs using shell command **'admixture' in admixture (v1.3.0)**.
 
 ・Script and input directory was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
-
-**・Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2/Admixture_dataset):
+#
+**・Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2/Admixture_dataset)
 
 This directory first contains four directories for unknown samples as below,
 
-**annuum_test**: for positive control six samples of *C.annuum*
+**・annuum_test**: for positive control six samples of *C.annuum*
 
-**chinense_test**: for positive control six samples of *C.chinense*, 
+**・chinense_test**: for positive control six samples of *C.chinense*, 
 
-**frutescens_test**: for positive control six samples of *C.frutescens*
+**・frutescens_test**: for positive control six samples of *C.frutescens*
 
-**dalle**: for six lines of Dalle Khursani
+**・dalle**: for six lines of Dalle Khursani
 
 In each above directory, four directories were prepared for catalog group as below,
 
-**group1**: for *C.annuum*&*C.chinense*-common catalog 
+**・group1**: for *C.annuum*&*C.chinense*-common catalog 
 
-**group2**: for *C.annuum*&*C.frutescens*-common catalog 
+**・group2**: for *C.annuum*&*C.frutescens*-common catalog 
 
-**group3**: for *C.chinense*&*C.frutescens*-common catalog 
+**・group3**: for *C.chinense*&*C.frutescens*-common catalog 
 
-**group4**: for Three-species-common catalogs 
-
+**・group4**: for Three-species-common catalogs 
+#
 In each above directory, two input data ('dataset.ped' and 'dataset.map') were prepared.
 
 ・This script includes two tasks as below.
