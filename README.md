@@ -66,7 +66,7 @@ This script includes two tasks as below.
 
 ・Script and input directory was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
 #
-**・Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2/Admixture_dataset)
+**・Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.3/Admixture_dataset)
 
 This directory first contains four directories for unknown samples as below,
 
