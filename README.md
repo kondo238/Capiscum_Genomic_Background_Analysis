@@ -55,10 +55,9 @@ In the Step.2,
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
 
 In the Step.3, admixture analysis was performed in more than two species-common catalogs using shell command **'admixture' in admixture (v1.3.0)**.
-
+#
 Script and input directory was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
-
-
+#
 **Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2/Admixture_dataset):
 
 This directory first contains four directories for unknown samples as below,
@@ -70,7 +69,6 @@ This directory first contains four directories for unknown samples as below,
 **frutescens_test**: for positive control six samples of *C.frutescens*
 
 **dalle**: for six lines of Dalle Khursani
-#
 
 In each above directory, four directories were prepared for catalog group as below,
 
@@ -81,19 +79,17 @@ In each above directory, four directories were prepared for catalog group as bel
 **group3**: for *C.chinense*&*C.frutescens*-common catalog 
 
 **group4**: for Three-species-common catalogs 
-#
 
 In each above directory, two input data ('dataset.ped' and 'dataset.map') were prepared.
-
-
+#
 This script includes two tasks as below.
 
 **1. Create bed file** **:** Create bed format file (dataset.bed) from input data (dataset.ped and dataset.map), which were all necessary for admixture analysis.
 
 **2. Admixture analysis** **:** Perform admixture analysis in each catalog dataset.
-
+#
 For running this job, please copy and paste the input directory (Admixture_dataset) in your working directory
-
+#
 The summarized script is shown below: 
 ```
 ##Path_for_working_directory
