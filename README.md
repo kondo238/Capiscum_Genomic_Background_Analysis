@@ -70,7 +70,7 @@ This directory first contains four directories for unknown samples as below,
 **frutescens_test**: for positive control six samples of *C.frutescens*
 
 **dalle**: for six lines of Dalle Khursani
-
+#
 
 In each above directory, four directories were prepared for catalog group as below,
 
@@ -81,7 +81,7 @@ In each above directory, four directories were prepared for catalog group as bel
 **group3**: for *C.chinense*&*C.frutescens*-common catalog 
 
 **group4**: for Three-species-common catalogs 
-
+#
 
 In each above directory, two input data ('dataset.ped' and 'dataset.map') were prepared.
 
