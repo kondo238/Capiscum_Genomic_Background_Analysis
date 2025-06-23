@@ -16,7 +16,8 @@
 
 # Summary of genetic background analysis
 # Step.1: Stacks analysis
-This is the repository 
+In step 1, stack analysis was performed with the shell command 'denoveo_map.pl' in stacks (v2.61).
+This analysis generated generate stakcs by *de novo* assembly from RAD-seq reads (.fastq) of all samples in the present study.
 
 # Step.2: Stacks analysis
 This is the repository 
