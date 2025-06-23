@@ -27,9 +27,11 @@ Then, **catalog_dataset ('populations.haplotypes.tsv')** will be obtained, conta
 For runnning this job, the population.txt is nessesary including sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
 
 The summarized script was shown below: 
-
-#!/bin/bash
-echo "Hello from Bash!"
+```
+git status
+git add
+git commit
+```
 
 
 
