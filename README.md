@@ -16,21 +16,23 @@
 
 # Summary of genetic background analysis
 # Step.1: Stacks analysis
-In the Step.1, stack analysis was performed with the shell command 'denoveo_map.pl' in stacks (v2.61).
+In the Step.1, stack analysis was performed with the shell command **'denoveo_map.pl' in stacks (v2.61)**.
 
 Script and 'population.txt' were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.1
 
-This analysis generated stacks by *de novo* assembly from RAD-seq reads (.fastq) of all samples in the present study. 
+This analysis **generated stacks by *de novo* assembly from RAD-seq reads (.fastq)** of all samples in the present study.
 
-Then, catalog_dataset ('populations.haplotypes.tsv') containing SNP genotype for all catalog (loci) and all samples.
+Then, **catalog_dataset ('populations.haplotypes.tsv')** will be obtained, containing SNP genotype for all catalog (loci) and all samples.
 
 For runnning this job, the population.txt is nessesary including sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
 
-The summarized script was shown below:
+The summarized script was shown below: 
 
-a
+AAA
 
-a
+
+
+
 
 # Step.2: Stacks analysis
 This is the repository 
