@@ -7,7 +7,9 @@
 ***NOTE:*** This repository was prepared to share the dataset and scripts related to the publication of the above manuscript. 
 
  This repositly include main two directoryies
-・
+
+**・All_scripts:** This directory contain scripts (shell, R) related to genetic background analysis of Dalle Khursani and positive contorol accessions of C. annuum-complex 
+
 ・
 
 # Step.1: Stacks analysis
