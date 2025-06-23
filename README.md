@@ -49,7 +49,15 @@ denovo_map.pl -M 5 -T 16 \
 
 
 # Step.2
-In the Step.2,  
+**!!!Attention!!!** **:** This repository contains all input data and R scripts, so anyone can run this job.
+
+This script includes two tasks as below.
+
+**1. Create bed file** **:** Create bed format file (dataset.bed) from input data (dataset.ped and dataset.map), which were all necessary for admixture analysis.
+
+**2. Admixture analysis** **:** Perform admixture analysis in each catalog dataset.
+#
+
 
 # Step.3
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
