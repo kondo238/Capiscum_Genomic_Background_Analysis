@@ -1,5 +1,5 @@
 # Capiscum_Genomic_Background_Analysis
-This is the repository contain two main directories
+**This is the repository contain two main directories**
 
 ・
 ・
