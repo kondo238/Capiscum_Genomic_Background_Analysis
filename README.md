@@ -34,7 +34,7 @@ This pipeline includes five jobs (‘1.ustacks’, ‘2.cstacks’, ‘3.sstacks
 
 Script and 'population.txt' were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.1
 
-For running this job, the population.txt is necessary, including sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
+**population.txt** **:** list for sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
 
 The summarized script is shown below: 
 ```
@@ -52,13 +52,36 @@ denovo_map.pl -M 5 -T 16 \
 In the Step.2,  
 
 # Step.3
-**!!!Attention!!!** **:** This repository contain all input data and scripts, so anyone can run this job.
+**!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
 
 In the Step.3, admixture analysis was performed in more than two species-common catalogs using shell command **'admixture' in admixture (v1.3.0)**.
 
-Script and all input data was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
+Script and input directory was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
 
-**Input data** **:** two input data ('dataset.ped' and 'dataset.map') were prepared in each catalog group in each test samples ('annuum_test', 'chinense_test', 'frutescens_test', 'dalle')
+**Input directoy** **:** directory containing all input data for admixture analysis:
+
+This directory firsty contai four directories for unknown samples as below,
+
+**annuum_test**: positive control six samples of *C.annuum*
+
+**chinense_test**: positive control six samples of *C.chinense*, 
+
+**frutescens_test**: positive control six samples of *C.frutescens*
+
+**dalle**: six lines of Dalle Khursani
+
+In each above directory, four directories were prepared for catalog group as below,
+
+**group1**: *C.annuum*&*C.chinense*-common catalog 
+
+**group2**: *C.annuum*&*C.frutescens*-common catalog 
+
+**group3**: *C.chinense*&*C.frutescens*-common catalog 
+
+**group4**: Three-species-common catalogs 
+
+In each above directory, two input data ('dataset.ped' and 'dataset.map') were prepared.
+
 
 This script includes two tasks as below.
 
@@ -66,17 +89,7 @@ This script includes two tasks as below.
 
 **2. Admixture analysis** **:** Perform admixture analysis in each catalog dataset.
 
-**2.cstacks** **:** develop catalog list
-
-**3.sstacks** **:** explore the stacks that matched each catalog
-
-**4.gstacks** **:** merge similar stacks and detect SNPs among all samples
-
-**5.population** **:** generated the output file **'(populations.haplotypes.tsv)'** called **catalog_dataset** in the present study.　Then, the representative stacks tag (sequence) file 'catalog.tags.tsv' was also obtained, which were used for positional analysis of stacks in Dalle Khursani.
-
-Script and 'population.txt' were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.1
-
-For running this job, the population.txt is necessary, including sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
+For running this job, please copy and paste the input directory (Admixture_dataset) in your working directory
 
 The summarized script is shown below: 
 ```
