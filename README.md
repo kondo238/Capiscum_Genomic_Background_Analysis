@@ -87,9 +87,9 @@ In each above directory, four directories were prepared for catalog group as bel
 **・group3**: for *C.chinense*&*C.frutescens*-common catalog 
 
 **・group4**: for Three-species-common catalogs 
-#
-In each above directory, two input data ('dataset.ped' and 'dataset.map') were prepared.
 
+In each above directory, two input data ('dataset.ped' and 'dataset.map') were prepared.
+#
 ・This script includes two tasks as below.
 
 **1. Create bed file** **:** Create bed format file (dataset.bed) from input data (dataset.ped and dataset.map), which were all necessary for admixture analysis.
