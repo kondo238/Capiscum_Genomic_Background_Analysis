@@ -15,7 +15,9 @@
 **・Dataset_used_for_publication** **:** This directory contains datasets used for this publication. The detailed information for each dataset was saved as a NOTE in each directory.
 
 # Summary of genetic background analysis
-# Step.1: Stacks analysis
+# Step.1
+**!!!Attention!!!** **:** This repository doesn't contain fastq data, so it's impossible to run this job for readers.
+
 In the Step.1, stack analysis was performed with the shell command **'denoveo_map.pl' in stacks (v2.61)**.
 
 This pipeline includes five jobs (‘1.ustacks’, ‘2.cstacks’, ‘3.sstacks’, ‘4.gstacks’, and ‘5.population’) as below.
@@ -46,8 +48,105 @@ denovo_map.pl -M 5 -T 16 \
 ```
 
 
+# Step.2
+In the Step.2,  
+
+# Step.3
+**!!!Attention!!!** **:** This repository contain all input data and scripts, so anyone can run this job.
+
+In the Step.3, admixture analysis was performed in more than two species-common catalogs using shell command **'admixture' in admixture (v1.3.0)**.
+
+Script and all input data was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
+
+**Input data** **:** two input data ('dataset.ped' and 'dataset.map') were prepared in each catalog group in each test samples ('annuum_test', 'chinense_test', 'frutescens_test', 'dalle')
+
+This script includes two tasks as below.
+
+**1. Create bed file** **:** Create bed format file (dataset.bed) from input data (dataset.ped and dataset.map), which were all necessary for admixture analysis.
+
+**2. Admixture analysis** **:** Perform admixture analysis in each catalog dataset.
+
+**2.cstacks** **:** develop catalog list
+
+**3.sstacks** **:** explore the stacks that matched each catalog
+
+**4.gstacks** **:** merge similar stacks and detect SNPs among all samples
+
+**5.population** **:** generated the output file **'(populations.haplotypes.tsv)'** called **catalog_dataset** in the present study.　Then, the representative stacks tag (sequence) file 'catalog.tags.tsv' was also obtained, which were used for positional analysis of stacks in Dalle Khursani.
+
+Script and 'population.txt' were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.1
+
+For running this job, the population.txt is necessary, including sample ID and population (In our case, "annuum", "chinense", "frutescens", "baccatum", "pubescens", "dalle", "annuum_test", "chinense_test", "frutescens_test")
+
+The summarized script is shown below: 
+```
+##Path_for_working_directory
+WD=/.../admixture_analysis
+
+##Define_the_group_list_for_unknown_samples
+array=(annuum_test chinense_test frutescens_test dalle)
+
+##Admixture_analysis_for_each_unknown_sample
+##This_is_the_loop_for_unknown_samples
+for i in ${array[@]}
+do
+
+##Admixture_analysis_for_group1_catalog(C.annuum_and_C.chinense-common_catalog)
+##Make_bed_file_by_plink
+cd ${WD}/Admixture_dataset/${i[@]}/group1
+plink --file dataset --make-bed --out dataset
+
+##Admixture_analysis_K=1~2
+mkdir result
+cd ./result
+##This_is_the_loop_for_K
+for K in {1..2}
+do
+admixture -C 10 -s time --cv ../dataset.bed $K | tee log${K}.out
+done
+
+##Admixture_analysis_for_group2_catalog(C.annuum_and_C.frutescens-common_catalog)
+##Make_bed_file_by_plink
+cd ${WD}/Admixture_dataset/${i[@]}/group2
+plink --file dataset --make-bed --out dataset
+
+##Admixture_analysis_K=1~2
+mkdir result
+cd ./result
+for K in {1..2} ##This_is_the_loop_for_K
+do
+admixture -C 10 -s time --cv ../dataset.bed $K | tee log${K}.out
+done
+
+##Admixture_analysis_for_group3catalog(C.chinense_and_C.frutescens-common_catalog)
+##Make_bed_file_by_plink
+cd ${WD}/Admixture_dataset/${i[@]}/group3
+plink --file dataset --make-bed --out dataset
+
+##Admixture_analysis_K=1~2
+mkdir result
+cd ./result
+for K in {1..2} ##This_is_the_loop_for_K
+do
+admixture -C 10 -s time --cv ../dataset.bed $K | tee log${K}.out
+done
 
 
-# Step.2: Stacks analysis
-This is the repository 
+##Admixture_analysis_for_group3catalog(Three_species-common_catalog)
+cd ${WD}/Admixture_dataset/${i[@]}/group4
+singularity exec /usr/local/biotools/p/plink:1.90b4--1 plink --file dataset --make-bed --out dataset
+
+##Admixture_analysis_K=1~3
+mkdir result
+cd ./result
+for K in {1..3} ##This_is_the_loop_for_K
+do
+admixture -C 10 -s time --cv ../dataset.bed $K | tee log${K}.out
+done
+
+done
+
+#end
+```
+
 
