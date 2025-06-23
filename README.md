@@ -8,7 +8,7 @@
 
  This repositly include main two directoryies
 
-**・All_scripts:** This directory contain scripts (shell, R) related to genetic background analysis of Dalle Khursani and positive contorol accessions of C. annuum-complex 
+**・All_scripts:** This directory contain scripts (shell, R) related to genetic background analysis of Dalle Khursani and positive contorol             accessions of C. annuum-complex 
 
 ・
 
