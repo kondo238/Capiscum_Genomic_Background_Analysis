@@ -1,11 +1,12 @@
 # Capiscum_Genomic_Background_Analysis
-**Information**
+# Information
 
 ***Research Paper:*** Nepalese landrace chili pepper Dalle Khursani (*Capsicum* sp.) is tetraploid possessing unique genetic background derived from both *C*. *annuum* and *C*. *chinense*
                       Kondo et al. (Under review) 
-                      
-**This is the repository contain two main directories**
 
+***NOTE:*** This repository was prepared to share the dataset and scripts related to the publication of the above manuscript. 
+
+ This repositly include main two directoryies
 ・
 ・
 
