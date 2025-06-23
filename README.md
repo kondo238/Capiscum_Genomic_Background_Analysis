@@ -63,23 +63,25 @@ Script and input directory was saved in https://github.com/kondo238/Capiscum_Gen
 
 This directory first contains four directories for unknown samples as below,
 
-**annuum_test**: positive control six samples of *C.annuum*
+**annuum_test**: for positive control six samples of *C.annuum*
 
-**chinense_test**: positive control six samples of *C.chinense*, 
+**chinense_test**: for positive control six samples of *C.chinense*, 
 
-**frutescens_test**: positive control six samples of *C.frutescens*
+**frutescens_test**: for positive control six samples of *C.frutescens*
 
-**dalle**: six lines of Dalle Khursani
+**dalle**: for six lines of Dalle Khursani
+
 
 In each above directory, four directories were prepared for catalog group as below,
 
-**group1**: *C.annuum*&*C.chinense*-common catalog 
+**group1**: for *C.annuum*&*C.chinense*-common catalog 
 
-**group2**: *C.annuum*&*C.frutescens*-common catalog 
+**group2**: for *C.annuum*&*C.frutescens*-common catalog 
 
-**group3**: *C.chinense*&*C.frutescens*-common catalog 
+**group3**: for *C.chinense*&*C.frutescens*-common catalog 
 
-**group4**: Three-species-common catalogs 
+**group4**: for Three-species-common catalogs 
+
 
 In each above directory, two input data ('dataset.ped' and 'dataset.map') were prepared.
 
