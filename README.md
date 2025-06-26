@@ -1,7 +1,7 @@
 # Capiscum_Genomic_Background_Analysis
 # Information
 
-***Research Paper*** **:** Nepalese landrace chili pepper Dalle Khursani (*Capsicum* sp.) is tetraploid possessing unique genetic background derived from both *C*. *annuum* and *C*. *chinense*
+***Research Paper*** **:** Nepalese landrace chili pepper Dalle Khursani (*Capsicum* sp.) is tetraploid, possessing a unique genetic background derived from both *C*. *annuum* and *C*. *chinense*
                       Kondo et al. (Under review) 
 
 ***Summary of this paper*** **:** In this paper, we aimed to clarify the genetic background of the Nepalese landrace chili pepper Dalle Khursani (tetraploid and alloploid: 2n = 2x = 48). For this analysis, we designed an approach to characterize the derivation of the genomic fragments called 'stacks', based on commonality of their existence and sequences with five *Capsicum* species (*C.annuum*, *C.chinense*, *C.frutescens*, *C.baccatum*, *C.pubescens*). Finally, we revealed that almost all stacks that existed in Dalle Khursani were derived from *C.annuum* and *C.chinense*. Finally, we concluded Dalle Khursani was tetraploid, derived from both *C*. *annuum* and *C*. *chinense*
@@ -19,7 +19,7 @@ This repository includes two main directories
 Schematic diagrams of the genetic background analysis of Dalle Khursani in the present study. (A) Preparation of the catalog dataset using the Stacks pipeline. The pipeline first generates stacks (genomic fragments) by de novo assembly of RAD-seq reads from each sample. Catalogs (loci) are then defined based on sequence similarity among all stacks, and SNPs within stacks across all samples are identified for each catalog. The output is a catalog dataset: a matrix containing SNP genotypes (including missing) data, for all catalogs and samples. (B) Characterization of stack derivation using the catalog dataset. Two arrays were prepared: The ‘reference array’, showing presence–absence information of stacks across all catalogs in five Capsicum species (C. annuum (C.a), C. chinense (C.c), C. frutescens (C.f), C. baccatum (C.b), and C. pubescens (C.p)), based on subset A of the catalog dataset. The ‘test array’, showing presence information for catalogs present in six lines of Dalle Khursani (Dalle Khursani-possessing catalogs), based on subset B. These were combined into a ‘merged array’, which was used to characterize the derivation of stacks at Dalle Khursani-possessing catalogs based on catalog commonality with the five species and three species of the C. annuum complex (C.a, C.c, and C.f) (Analysis 1). For catalog categories shared among multiple C. annuum complex species ((1) C.a & C.c-common, (2) C.a & C.f-common, (3) C.c & C.f-common, (4) three-species-common), stack derivations were further resolved by admixture analysis using SNP data within each catalog group (Analysis 2).
 
 # Summary of analysis procedure
-# Step.1
+# Step.1 Stacks analysis
 **!!!Attention!!!** **:** This repository doesn't contain fastq data, so it's impossible to run this job for readers.
 
 ・In the Step.1, stack analysis was performed with the shell command **'denoveo_map.pl' in stacks (v2.61)**.
@@ -52,7 +52,7 @@ denovo_map.pl -M 5 -T 16 \
 ```
 
 
-# Step.2
+# Step.2 Catalog existence-based stack characterization
 **!!!Attention!!!** **:** This repository contains all input data and R scripts, so anyone can run this job.
 
 ・Rscript and input data were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
@@ -63,11 +63,11 @@ denovo_map.pl -M 5 -T 16 \
 
 **2. Preparation for the reference array** **:** The 'reference array' is prepared, which contains 'presence-absence' information for all catalogs in five Cpsicum species.
 
-**3. Catalog existence-based stacks characterization** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), species derivation of their stacks were characterized based on the 'reference array'. Then, the output data was obtained and saved as (Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv).
+**3. Catalog existence-based stacks characterization (Analysis 1)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), species derivation of their stacks were characterized based on the 'reference array'. The output data was saved as (Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv).
 
-**4. Preparation of genotypic data for the sequence-based stacks characterization** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared. These dataset was saved as the directory named 'Admixture_dataset', utilized for Admixture analysis at Step.3
+**4. Preparation of genotypic data for the sequence-based stacks characterization (Analysis 2)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared. These dataset was saved as the directory named 'Admixture_dataset', utilized for Admixture analysis at Step.3
 
-# Step.3
+# Step.3 Sequence-based stack characterization
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
 
 ・In the Step.3, admixture analysis was performed in more than two species-common catalogs using the shell command **'admixture' in admixture (v1.3.0)**.
