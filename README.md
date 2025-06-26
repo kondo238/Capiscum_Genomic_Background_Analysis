@@ -57,10 +57,12 @@ denovo_map.pl -M 5 -T 16 \
 
 ・Rscript and input data were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
 
-・The used R version was 4.3.2
+・The used R version was **4.3.2**
 
 ・The necessary R package was shown below.
+
 **・progress(1.2.2)**
+
 **・stringr(1.5.0)**
 
 ・In the Step.2, the four main tasks were implemented below.
@@ -188,10 +190,12 @@ done
 
 ・Rscript and input data were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.4
 
-・The R version was 4.3.2
+・The R version was **4.3.2**
 
 ・The necessary R package was shown below.
+
 **・ggplot2(3.4.4)**
+
 **・tidyverse(2.0.0)**
 
 ・In the Step.4, bar plots of the attribution proportion (population structure) calculated by Adimixture analysis will be drawn.
