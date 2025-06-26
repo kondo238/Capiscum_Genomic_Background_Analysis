@@ -55,20 +55,24 @@ denovo_map.pl -M 5 -T 16 \
 # Step.2
 **!!!Attention!!!** **:** This repository contains all input data and R scripts, so anyone can run this job.
 
-This script includes two tasks as below.
+・Rscript and input data were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
 
-**1. Create bed file** **:** Create bed format file (dataset.bed) from input data (dataset.ped and dataset.map), which were all necessary for admixture analysis.
+・In the Step.2, the three main tasks were implemented below.
 
-**2. Admixture analysis** **:** Perform admixture analysis in each catalog dataset.
-#
+**1. Preparation for Catalog dataset** **:** Output data () by stacks was loaded, and the catalog dataset was prepared, which is a matrix containing genotypes (including missing data) for all catalogs and samples.  
 
+**2. Preparation for the reference array** **:** The 'reference array' is prepared, which contains 'presence-absence' information for all catalogs in five Cpsicum species.
+
+**3. Catalog existence-based stacks characterization** **:** In the test samples (Dalle Khursani, and positive control accessions in *C.annuum* complex), derivation of their stacks were characterized based on catalog commonality with five Capsicum species. Then, the output data was obtained and saved as ().
+
+**4. Preparation of genotypic data for the sequence-based stacks characterization** **:** In the test samples (Dalle Khursani, and positive control accessions in *C.annuum*, *C.chinense*, *C.frutescens*), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared.
 
 # Step.3
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
 
-・In the Step.3, admixture analysis was performed in more than two species-common catalogs using shell command **'admixture' in admixture (v1.3.0)**.
+・In the Step.3, admixture analysis was performed in more than two species-common catalogs using the shell command **'admixture' in admixture (v1.3.0)**.
 
-・Script and input directory was saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
+・Script and input directory were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.3
 #
 **・Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.3/Admixture_dataset)
 
@@ -82,7 +86,7 @@ This directory first contains four directories for unknown samples as below,
 
 **・dalle**: for six lines of Dalle Khursani
 
-In each above directory, four directories were prepared for catalog group as below,
+In each above directories, four directories were prepared for the catalog group as below,
 
 **・group1**: for *C.annuum*&*C.chinense*-common catalog 
 
@@ -92,7 +96,7 @@ In each above directory, four directories were prepared for catalog group as bel
 
 **・group4**: for Three-species-common catalogs 
 
-In each above directory, two input data ('dataset.ped' and 'dataset.map') were prepared.
+In each above directories, two input datasets ('dataset.ped' and 'dataset.map') were prepared.
 #
 ・This script includes two tasks as below.
 
