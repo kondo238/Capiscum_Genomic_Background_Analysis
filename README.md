@@ -52,12 +52,18 @@ denovo_map.pl -M 5 -T 16 \
 ```
 
 
-# Step.2 Catalog existence-based stack characterization
+# Step.2 Catalog existence-based stack characterization (Analysis1)
 **!!!Attention!!!** **:** This repository contains all input data and R scripts, so anyone can run this job.
 
 ・Rscript and input data were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.2
 
-・In the Step.2, the three main tasks were implemented below.
+・The used R version was 4.3.2
+
+・The necessary R package was shown below.
+**・progress(1.2.2)**
+**・stringr(1.5.0)**
+
+・In the Step.2, the four main tasks were implemented below.
 
 **1. Preparation for Catalog dataset** **:** Output data (populations.haplotypes.tsv) by stacks was loaded, and the catalog dataset was prepared, which is a matrix containing genotypes (including missing data) for all catalogs and samples.  
 
@@ -65,16 +71,16 @@ denovo_map.pl -M 5 -T 16 \
 
 **3. Catalog existence-based stacks characterization (Analysis 1)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), species derivation of their stacks were characterized based on the 'reference array'. The output data was saved as (Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv).
 
-**4. Preparation of genotypic data for the sequence-based stacks characterization (Analysis 2)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared. These dataset was saved as the directory named 'Admixture_dataset', utilized for Admixture analysis at Step.3
+**4. Preparation of genotypic data for the sequence-based stacks characterization (Analysis 2)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared. These dataset was saved as the directory named 'Admixture_dataset', utilized as input directory for Admixture analysis at Step.3
 
-# Step.3 Sequence-based stack characterization
+# Step.3 Sequence-based stack characterization ((Analysis2)
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
 
 ・In the Step.3, admixture analysis was performed in more than two species-common catalogs using the shell command **'admixture' in admixture (v1.3.0)**.
 
 ・Script and input directory were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.3
 #
-**・Input directory** **:** directory containing all input data for admixture analysis (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.3/Admixture_dataset)
+**・Input directory (Admixture_dataset)** **:** directory containing all input data for admixture analysis, which was also the output directory obtained by Step.2 as described above. (https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.3/Admixture_dataset)
 
 This directory first contains four directories for unknown samples as below,
 
@@ -176,5 +182,26 @@ done
 
 #end
 ```
+
+# Step.4 Drawing figures for sequence-based stack characterization  
+**!!!Attention!!!** **:** This repository contains all input data and R scripts, so anyone can run this job.
+
+・Rscript and input data were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.4
+
+・The R version was 4.3.2
+
+・The necessary R package was shown below.
+**・ggplot2(3.4.4)**
+**・tidyverse(2.0.0)**
+
+・In the Step.4, bar plots of the attribution proportion (population structure) calculated by Adimixture analysis will be drawn.
+
+・The figures will be created in each catalog group (*C.a*&*C.c*-common, *C.a*&*C.f*-common, *C.c*&*C.f*-common, Three-species-common) in each unknown samples (Dalle Khursani and positive control of *C.annuum* complex species).
+
+・The output directory 'Output' will be saved, including all figures.
+
+
+
+
 
 
