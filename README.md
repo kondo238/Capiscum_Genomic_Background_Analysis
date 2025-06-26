@@ -59,13 +59,13 @@ denovo_map.pl -M 5 -T 16 \
 
 ・In the Step.2, the three main tasks were implemented below.
 
-**1. Preparation for Catalog dataset** **:** Output data () by stacks was loaded, and the catalog dataset was prepared, which is a matrix containing genotypes (including missing data) for all catalogs and samples.  
+**1. Preparation for Catalog dataset** **:** Output data (populations.haplotypes.tsv) by stacks was loaded, and the catalog dataset was prepared, which is a matrix containing genotypes (including missing data) for all catalogs and samples.  
 
 **2. Preparation for the reference array** **:** The 'reference array' is prepared, which contains 'presence-absence' information for all catalogs in five Cpsicum species.
 
-**3. Catalog existence-based stacks characterization** **:** In the test samples (Dalle Khursani, and positive control accessions in *C.annuum* complex), derivation of their stacks were characterized based on catalog commonality with five Capsicum species. Then, the output data was obtained and saved as ().
+**3. Catalog existence-based stacks characterization** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), species derivation of their stacks were characterized based on the 'reference array'. Then, the output data was obtained and saved as (Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv).
 
-**4. Preparation of genotypic data for the sequence-based stacks characterization** **:** In the test samples (Dalle Khursani, and positive control accessions in *C.annuum*, *C.chinense*, *C.frutescens*), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared.
+**4. Preparation of genotypic data for the sequence-based stacks characterization** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared. These dataset was saved as the directory named 'Admixture_dataset', utilized for Admixture analysis at Step.3
 
 # Step.3
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
