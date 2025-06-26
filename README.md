@@ -1,12 +1,11 @@
 # Capiscum_Genomic_Background_Analysis
 # Information
 
-***Research Paper*** **:** Nepalese landrace chili pepper Dalle Khursani (*Capsicum* sp.) is tetraploid, possessing a unique genetic background derived from both *C*. *annuum* and *C*. *chinense*
-                      Kondo et al. (Under review) 
+***Research Paper*** **:** The Nepalese landrace chili pepper Dalle Khursani (Capsicum sp.) is a tetraploid with a unique genetic background derived from both *C.annuum* and *C.chinense*Nepalese. Kondo et al. (Under review) 
 
 ***Summary of this paper*** **:** In this paper, we aimed to clarify the genetic background of the Nepalese landrace chili pepper Dalle Khursani (tetraploid and alloploid: 2n = 2x = 48). For this analysis, we designed an approach to characterize the derivation of the genomic fragments called 'stacks', based on commonality of their existence and sequences with five *Capsicum* species (*C.annuum*, *C.chinense*, *C.frutescens*, *C.baccatum*, *C.pubescens*). Finally, we revealed that almost all stacks that existed in Dalle Khursani were derived from *C.annuum* and *C.chinense*. Finally, we concluded Dalle Khursani was tetraploid, derived from both *C*. *annuum* and *C*. *chinense*
 
-***NOTE*** **:** This repository was prepared to share the dataset and scripts related to the publication of the above manuscript. 
+***NOTE*** **:** This repository was prepared to share the dataset and scripts related to the publication of our manuscript. 
 
 This repository includes two main directories
 
@@ -71,7 +70,7 @@ denovo_map.pl -M 5 -T 16 \
 
 **4. Preparation of genotypic data for the sequence-based stacks characterization (Analysis 2)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared. These dataset was saved as the directory named 'Admixture_dataset', utilized as input directory for Admixture analysis at Step.3
 
-# Step.3 Sequence-based stack characterization ((Analysis2)
+# Step.3 Sequence-based stack characterization (Analysis2)
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
 
 ・In the Step.3, admixture analysis was performed in more than two species-common catalogs using the shell command **'admixture' in admixture (v1.3.0)**.
