@@ -66,14 +66,14 @@ denovo_map.pl -M 5 -T 16 \
 
 **2. Preparation for the reference array** **:** The 'reference array' is prepared, which contains 'presence-absence' information for all catalogs in five Cpsicum species.
 
-**3. Catalog existence-based stacks characterization (Analysis 1)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), species derivation of their stacks were characterized based on the 'reference array'. The output data was saved as (Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv).
+**3. Catalog existence-based stacks characterization (Analysis 1)** **:** In the test samples (Dalle Khursani and positive control accessions each from *C.annuum* complex species), species derivation of their stacks was characterized based on the 'reference array'. The output data was saved as (Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv).
 
 **4. Preparation of genotypic data for the sequence-based stacks characterization (Analysis 2)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared. These dataset was saved as the directory named 'Admixture_dataset', utilized as input directory for Admixture analysis at Step.3
 
 # Step.3 Sequence-based stack characterization (Analysis2)
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
 
-・In the Step.3, admixture analysis was performed in more than two species-common catalogs using the shell command **'admixture' in admixture (v1.3.0)**.
+・In the Step.3, admixture analysis was performed in more than two species-common catalogs ((1) C.a & C.c-common, (2) C.a & C.f-common, (3) C.c & C.f-common, (4) three-species-common catalogs, respectively) using the shell command **'admixture' in admixture (v1.3.0)**.
 
 ・Script and input directory were saved in https://github.com/kondo238/Capiscum_Genomic_Background_Analysis/tree/main/All_scripts/Step.3
 #
@@ -91,13 +91,13 @@ This directory first contains four directories for unknown samples as below,
 
 In each above directories, four directories were prepared for the catalog group as below,
 
-**・group1**: for *C.annuum*&*C.chinense*-common catalog 
+**・group1**: for (1) C.a & C.c-common catalog
 
-**・group2**: for *C.annuum*&*C.frutescens*-common catalog 
+**・group2**: for (2) C.a & C.f-common catalog 
 
-**・group3**: for *C.chinense*&*C.frutescens*-common catalog 
+**・group3**: for (3) C.c & C.f-common catalog 
 
-**・group4**: for Three-species-common catalogs 
+**・group4**: for (4) three-species-common 
 
 In each above directories, two input datasets ('dataset.ped' and 'dataset.map') were prepared.
 #
@@ -191,7 +191,7 @@ done
 
 ・In the Step.4, bar plots of the attribution proportion (population structure) calculated by Adimixture analysis will be drawn.
 
-・The figures will be created in each catalog group (*C.a*&*C.c*-common, *C.a*&*C.f*-common, *C.c*&*C.f*-common, Three-species-common) in each unknown samples (Dalle Khursani and positive control of *C.annuum* complex species).
+・The figures will be created in each catalog group ((1) C.a & C.c-common, (2) C.a & C.f-common, (3) C.c & C.f-common, (4) three-species-common catalogs, respectively) in each unknown samples (Dalle Khursani and *C.annuum* complex species (positive control)).
 
 ・The output directory 'Output' will be saved, including all figures.
 
