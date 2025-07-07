@@ -60,7 +60,7 @@ denovo_map.pl -M 5 -T 16 \
 
 ・The necessary R packages:**・progress(1.2.2)** **・stringr(1.5.0)**
 
-・In the Step.2, the four main tasks were implemented below.
+・In Step.2, the four main tasks were implemented below.
 
 **1. Preparation for Catalog dataset** **:** Output data (populations.haplotypes.tsv) by stacks was loaded, and the catalog dataset was prepared, which is a matrix containing genotypes (including missing data) for all catalogs and samples.  
 
@@ -68,7 +68,7 @@ denovo_map.pl -M 5 -T 16 \
 
 **3. Catalog existence-based stacks characterization (Analysis 1)** **:** In the test samples (Dalle Khursani and positive control accessions each from *C.annuum* complex species), species derivation of their stacks was characterized based on the 'reference array'. The output data was saved as (Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv).
 
-**4. Preparation of genotypic data for the sequence-based stacks characterization (Analysis 2)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), genotype data in catalogs shared with multiple species of *C.annuum* complex were prepared. These dataset was saved as the directory named 'Admixture_dataset', utilized as input directory for Admixture analysis at Step.3
+**4. Preparation of genotypic data for the sequence-based stacks characterization (Analysis 2)** **:** In the test samples (Dalle Khursani and positive control accessions in *C.annuum* complex), genotype data in catalogs shared with multiple species of *C.annuum* complex ((1) C.a & C.c-common, (2) C.a & C.f-common, (3) C.c & C.f-common, (4) three-species-common catalogs, respectively) were prepared. This dataset was saved as the directory named 'Admixture_dataset', utilized as the input directory for Admixture analysis at Step.3
 
 # Step.3 Sequence-based stack characterization (Analysis2)
 **!!!Attention!!!** **:** This repository contains all input data and scripts, so anyone can run this job.
