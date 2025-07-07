@@ -27,6 +27,8 @@ Schematic diagrams of the genetic background analysis of Dalle Khursani in the p
 
 **1.ustacks** **:** construct short contigs called ‘stacks’ by de novo assembly from filtered reads (.fastq) of all samples and defined loci called ‘catalogs’ 
 
+※In the script, the maximum number of allowed mismatches between stacks (‘-M’) was set to 5, and the minimum depth of coverage to create a stack (‘-m’) was set to 3
+
 **2.cstacks** **:** develop catalog list
 
 **3.sstacks** **:** explore the stacks that matched each catalog
