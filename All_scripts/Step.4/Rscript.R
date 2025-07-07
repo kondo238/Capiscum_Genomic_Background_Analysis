@@ -1,5 +1,5 @@
 ################################################NOTE############################################################################################################################################
-#This is the R script to draw figures regarding admixture analysis for each catalog group (group1, group2, group3, group4) in the unknown samples
+#This is the R script to draw figures regarding population structures for the unknown samples (six lines of Dalle Khursani, and additional six accessions each from C. annuum complex species) in each catalog group (group1:C.a&C.c-common, group2:C.a&C.f-common, group3:C.c&C.f-common, group4:Three species-common).
 #The dataset for ancestral population-belonging proportion was prepared by copying and pasting the directory 'Admixture_dataset' (after admixture analysis: see Step 2) to the Dataset directory (./Dataset)
 #Finally, the barplot exhibiting population-belonging proportion will be obtained in the output directory (./Output), which will automatically be created.
 ################################################################################################################################################################################################
@@ -152,6 +152,8 @@ for(l in 1:i){
 df <- df5 #The_finale_adjusted_dataframe
 
 rm(df2, df3, df4, df5, Related_sampleID, a, i, j, k, l, n, x, vec, no)
+
+
 ###Draw_barplot_exhibiting_ancestral_population-deriving_proportion_using_ggplot
 ###Draw_figure_without_sample_name_and_save
 x <- ggplot(df, aes(x = Accession, y = Value, fill=K)) +
