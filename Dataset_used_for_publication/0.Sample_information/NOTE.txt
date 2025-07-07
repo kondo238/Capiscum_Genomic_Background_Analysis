@@ -1,4 +1,4 @@
 #NOTE
 This directory includes one file below.
 
-1. Sample_list.csv: List of the accessions for the genetic background analysis, which are necessary for R script-based genetic background analysis in the present study.
+1. Sample_information.csv: List of the accessions used for the genetic background analysis, which are necessary for R script-based genetic background analysis in the present study.
