@@ -1,5 +1,5 @@
 ################################################NOTE####################################################################################################################################################
-#This is an R script to perform "1st Step: stacks existence-based catalog characterization for unknown Capsicum sample", and prepare the genotype data for "2nd Step:stacks-sequence based catalog characterization"
+#This is an R script to perform "catalog existence-based stack characterization (Analysis1) for unknown Capsicum sample (Six lines of Dalle Khursani, and additional six accessions each from C. annuum complex)", and prepare the genotype data for "Stacks sequence-based catalog characterization (Analysis2)"
 #!!!!!Important!!!!!! Before this analysis, please unzip the catalog dataset file "populations.haplotypes.tsv.zip" in the Dataset directory (./Dataset)
 #######################################################################################################################################################################################################
 
@@ -15,7 +15,7 @@ dir.create("./Output/Admixture_dataset/")
 #Loading_Sample_ID_list
 sample_ID_list <- as.data.frame(read.csv("./Dataset/sample_id.csv"))
 
-#Loading_catalog_dataset_for_all_samples(each six_accessions_of_Capsicum_five_species & additional six accessions of C.annuum, C.chinense, C.frutescens, and Dalle Khursani)
+#Loading_catalog_dataset_for_all_samples(six_reference_accessions_each_from_five_Capsicum_species & additional six accessions of C.annuum, C.chinense, C.frutescens, and six lines of Dalle Khursani)
 catalog_dataset <- read.delim("./Dataset/populations.haplotypes.tsv", header = T, sep = "") #genotype_data_of_all_samples
 #modify_the_mismatch_between_column_name_and_the_data
 a <- catalog_dataset[,-c(57:59)]
@@ -60,7 +60,7 @@ a <- cbind(catalog_dataset, count_df[,-1])
 write.csv(a, "./Output/Catalog_dataset_with_stacks_count_data.csv", row.names = F)
 rm(a)
 
-########################################Genomic_background_analysis_for_unknown_samples(Step1.catalog_exsistance-based_characterization_&_preparation_of_genotype_data_for_Step2.catalog_sequence-based_characterization)#######################################################
+########################################Genomic_background_analysis_for_unknown_samples(catalog_exsistance-based_stack_characterization_(Analysis1)_&_preparation_of_genotype_data_for_Step2.catalog_sequence-based_characterization(Analysis2))#######################################################
 ############Preparation_of_for_genomic_bacground_analysis############
 #Define_group_for_reference_species_and_unknown_samples
 reference_spesies <- c("annuum", "chinense", "frutescens", "baccatum", "pubescens") #For_reference_species
@@ -81,7 +81,7 @@ for(i in 1:length(reference_spesies)){ #Put_Presence(stacks >= 1)_and_Absence(st
 rownames(reference_array) <- reference_array$RAD_catalog
 rm(i)
 
-####################Step1.catalog_existance-based_characterization#################################
+####################Catalog_existance-based_stack_characterization#################################
 #Calculation_of_the_commonality_of_present_stacks_between_unknown_samples_and_Capsicm_species_with_preparing_genotype_data_for_futher_Admixture_analysis_for_multiple_species-shared_catalogs
 for(g in 1:length(unknown_samples)){
 dir.create(paste("./Output",
@@ -163,7 +163,7 @@ Derivation_df <- rbind(Derivation_df, FiveSpeciesBased)
 
 rm(FiveSpeciesBased, df, di)
 
-############Three_Capsicum_species(C.annuum-complex)-based_characterization############
+############C.annuum_complex_species(Three_species)-based_characterization############
 #Convert_presence-absence_information_of_three_Capsicum_species_to_binary_data(1:Precense, 0:Absence)
 df <- merged_array[,c(2:4)]
 for(i in 1:3){
@@ -202,7 +202,7 @@ for(i in 1:3){
 }
 rm(i, di)
 
-#Calculation_for_two_species-common_catalogs
+#Calculation_for_two_species-common_catalogs (C.a&C.c-common, C.a&C.f-common, C.c&C.f-common catalogs)
 di <- diag(0, nrow = 3, ncol = 3)
 di[,] <- 1
 di[1,3] <- di[2,2] <- di[3,1] <- 0
@@ -235,7 +235,7 @@ rm(ThreeSpeciesBased, df)
 
 write.csv(Derivation_df, "./Output/Output_of_catalog_derivation_for_unknown_samples_based_on_step1_analysis.csv", row.names = F)
 
-############Preparation_for_genotype_dataset_for_Step2.catalog_sequence-based_characterization############
+############Preparation_for_genotype_dataset_for_stack_sequence-based_characterization_(Analysis2)############
 #Define_catalog_group(group1:C.annuum&C.chinense-common_catalog, group2:C.annuum&C.frutescens-common_catalog,group3:C.chinense&C.frutescens-common_catalog, group4:Three_species-common_catalog,)
 Catalog_group_info <- data.frame(Group=c("group1", "group2", "group3", "group4"),
                                  FistSpecies=c("annuum", "annuum", "chinense", "annuum"),
@@ -313,7 +313,7 @@ rm(i, j, g1, g2, no, s, d)
 #1st_filtering_for_few_genotyped_catalog(remove catalog that less than 4 stacks)
 Needed_reads <- 4 #Threshold_for_genotyped_samples
 
-if(h != 4){ #In case of two_species-common catalogs (group1, group2, and group3)
+if(h != 4){ #In case of two_species-common catalogs (group1: C.a&C.c-common, group2: C.a&C.f-common, and group3: C.c&C.f-common)
 #Prepare_data_frame_to_save_stacks_count_data_at_each_catalog
 c_df <- count_df[marker,
                  c(1,
