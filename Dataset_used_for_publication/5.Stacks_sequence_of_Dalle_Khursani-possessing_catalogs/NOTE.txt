@@ -1,5 +1,9 @@
-This directory includes the five files below.
+This directory includes one directory and the five files below.
 
+# Directory
+1. catalog.tags.tsv: This directory includes three split (catalog.tags.tsv.split1.gz, catalog.tags.tsv.split2.gz, catalog.tags.tsv.split3.gz) files of stacks sequence data obtained by stacks analysis using all samples. The merged data was used to develop below FASTA files. 
+
+#Files
 1. C.annuum-derived_stacks.fa.zip: Sequence data (.fa) of stacks at C.annuum-derived catalogs.
 
 2. C.chinense-derived_stacks.fa.zip: Sequence data (.fa) of stacks at C.chinense-derived catalogs.
